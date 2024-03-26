@@ -7,6 +7,13 @@
     Shell.FlyoutBehavior="Disabled"
     Title="MauiSample">
 
+<Shell.TitleView>
+        <HorizontalStackLayout>
+            <Label>サンプル</Label>
+            <Button Text="クリック"></Button>
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
