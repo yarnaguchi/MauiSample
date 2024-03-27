@@ -2,10 +2,12 @@
 
 public partial class App : Application
 {
-	public App()
-	{
-		InitializeComponent();
+    public App()
+    {
+        Current.UserAppTheme = AppTheme.Light;
 
-		MainPage = new AppShell();
-	}
+        InitializeComponent();
+
+        MainPage = new AppShell();
+    }
 }
