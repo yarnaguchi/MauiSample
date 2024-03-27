@@ -2,23 +2,20 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
 
 	public MainPage()
 	{
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	async void OnCloseClicked(object sender, EventArgs e)
 	{
-		count++;
+		bool ans = await DisplayAlert("確認", "アプリを終了します。よろしいですか？", "Yes", "No");
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		if (ans == true)
+		{
+			// アプリ（ウィンドウ）を閉じる
+			Application.Current.Quit();
+		}
 	}
 }
-
