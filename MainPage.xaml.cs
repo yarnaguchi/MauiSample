@@ -4,29 +4,50 @@ namespace MauiSample;
 
 public class ProductRecord
 {
-    public ObservableCollection<ProductRecord> ProductRecords { get; private set; } = new ObservableCollection<ProductRecord>();
-
-    public ProductRecord()
-    {
-        ProductRecords.Add(new ProductRecord()
-        {
-            ProductNumber = "189750-000",
-            UniformNumber = "◯✖️△□",
-            AccommodateNumber = 30,
-        });
-
-    }
     public string ProductNumber { get; set; }
     public string UniformNumber { get; set; }
-    public int AccommodateNumber { get; set; }
+    public string AccommodateNumber { get; set; }
 }
 
 public partial class MainPage : ContentPage
 {
+    ObservableCollection<ProductRecord> ProductRecords = [];
+
     public MainPage()
     {
         InitializeComponent();
-        // BindingContext = new ProductRecord();
+        cv.ItemsSource = ProductRecords;
+
+        ProductRecords.Add(new ProductRecord()
+        {
+            ProductNumber = "189750-000",
+            UniformNumber = "◯✖️△□",
+            AccommodateNumber = "30",
+        });
+        ProductRecords.Add(new ProductRecord()
+        {
+            ProductNumber = "189750-000",
+            UniformNumber = "◯✖️△□",
+            AccommodateNumber = "30",
+        });
+        ProductRecords.Add(new ProductRecord()
+        {
+            ProductNumber = "189750-000",
+            UniformNumber = "◯✖️△□",
+            AccommodateNumber = "30",
+        });
+        ProductRecords.Add(new ProductRecord()
+        {
+            ProductNumber = "189750-000",
+            UniformNumber = "◯✖️△□",
+            AccommodateNumber = "30",
+        });
+        ProductRecords.Add(new ProductRecord()
+        {
+            ProductNumber = "189750-000",
+            UniformNumber = "◯✖️△□",
+            AccommodateNumber = "30",
+        });
     }
 
     async void OnCloseClicked(object sender, EventArgs e)
@@ -52,12 +73,12 @@ public partial class MainPage : ContentPage
 
     void OnAddProductRecordClicked(object sender, EventArgs e)
     {
-        // ProductRecords.Add(new ProductRecord()
-        // {
-        //     ProductNumber = "189750-000",
-        //     UniformNumber = "◯✖️△□",
-        //     AccommodateNumber = 30,
-        // });
+        ProductRecords.Add(new ProductRecord()
+        {
+            ProductNumber = "189750-000",
+            UniformNumber = "◯✖️△□",
+            AccommodateNumber = "30",
+        });
     }
 
 }
