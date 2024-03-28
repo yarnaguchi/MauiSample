@@ -128,7 +128,7 @@
                    Margin="5, 0, 0, 0"
                    VerticalOptions="Center" />
 
-              <Button Grid.Row="2" Grid.Column="7" Grid.RowSpan="2"
+            <Button Grid.Row="2" Grid.Column="7" Grid.RowSpan="2"
                       Text="リセット"
                       TextColor="#7f7f7f"
                       CornerRadius="0"
@@ -227,7 +227,7 @@
                      </CollectionView.ItemTemplate>
               </CollectionView>
               -->
-              <!--
+            <!--
             <BoxView Grid.Row="4" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"
                      Color="White" />
             <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
@@ -323,7 +323,7 @@
                    VerticalOptions="Center" />
 
             <!-- 8行目 -->
-              <Button Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="3"
+            <Button Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="3"
                      Text="紐づけ処理"
                      TextColor="#7f7f7f"
                      CornerRadius="0"
@@ -399,7 +399,7 @@
                    VerticalOptions="Center" />
         </Grid>
 
-              <Button
+        <Button
                      Text="紐づけ処理"
                      Clicked="OnAddProductRecordClicked" />
 
