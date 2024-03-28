@@ -90,7 +90,7 @@
                 <ColumnDefinition Width="98" />
                 <ColumnDefinition Width="148" />
                 <ColumnDefinition Width="118" />
-                <ColumnDefinition />
+                <ColumnDefinition Width="375" />
                 <ColumnDefinition Width="152"/>
                 <ColumnDefinition Width="152" />
 
@@ -127,15 +127,20 @@
                    FontFamily="MeiryoUIRegular"
                    Margin="5, 0, 0, 0"
                    VerticalOptions="Center" />
-            <BoxView Grid.Row="2" Grid.Column="7" Grid.RowSpan="2"
-                     Color="#e6e6e6" />
-            <Label Grid.Row="2" Grid.Column="7" Grid.RowSpan="2"
-                   Text="リセット"
-                   TextColor="#7f7f7f"
-                   FontSize="26"
-                   FontFamily="MeiryoUIRegular"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" />
+
+              <Button Grid.Row="2" Grid.Column="7" Grid.RowSpan="2"
+                      Text="リセット"
+                      TextColor="#7f7f7f"
+                      CornerRadius="0"
+                      BackgroundColor="#e6e6e6"
+                      BorderWidth="0"
+                      FontSize="26"
+                      FontFamily="MeiryoUIRegular"
+                      HeightRequest="92"
+                      WidthRequest="152"
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"
+                      Clicked="OnResetClicked" />
 
             <!-- 3行目 -->
             <BoxView Grid.Row="3" Grid.Column="1"
@@ -156,6 +161,73 @@
                    VerticalOptions="Center" />
 
             <!-- 4〜5行目 -->
+            <!--
+              <CollectionView Grid.Row="4" Grid.Column="1" Grid.RowSpan="5" Grid.ColumnSpan="3"
+                               ItemsSource="{Binding ProductRecords}">
+                              <CollectionView.ItemTemplate>
+                              <DataTemplate>
+
+                     <Grid RowSpacing="1" ColumnSpacing="1" BackgroundColor="#aaaaaa">
+                            <Grid.RowDefinitions>
+                                   <RowDefinition Height="Auto" />
+                                   <RowDefinition Height="52" />
+                              </Grid.RowDefinitions>
+
+                              <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="303" />
+                                   <ColumnDefinition Width="148" />
+                                   <ColumnDefinition Width="118" />
+                            </Grid.ColumnDefinitions>
+
+              <BoxView Grid.RowSpan="2"
+                     Color="White" />
+            <Label Text="生産品番_設変なし"
+                   TextColor="#7f7f7f"
+                   Margin="5, 5, 0, 0"
+                   FontSize="11"
+                   FontFamily="MeiryoUIRegular" />
+            <Label Grid.Row="1"
+                            Text="{Binding ProductNumber}"
+                            FontSize="30"
+                            FontFamily="MeiryoUIRegular"
+                            Margin="10, 0, 0, 0"
+                            VerticalOptions="Center" />
+            <BoxView Grid.Column="1" Grid.RowSpan="2"
+                              Color="Black" />
+            <Label Grid.Column="1"
+                            Text="背番号"
+                            Margin="5, 5, 0, 0"
+                            FontSize="11"
+                            FontFamily="MeiryoUIRegular"
+                            TextColor="White" />
+            <Label Grid.Row="1" Grid.Column="1"
+                            Text="{Binding UniformNumber}"
+                            FontSize="30"
+                            FontFamily="MeiryoUIRegular"
+                            TextColor="White"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center" />
+            <BoxView Grid.Column="2" Grid.RowSpan="2"
+                              Color="White" />
+            <Label Grid.Column="2"
+                            Text="収容数"
+                            TextColor="#7f7f7f"
+                            FontSize="11"
+                            Margin="5, 5, 0, 0"
+                            FontFamily="MeiryoUIRegular" />
+            <Label Grid.Row="1" Grid.Column="2"
+                            Text="{Binding AccommodateNumber}"
+                            FontSize="28"
+                            FontFamily="MeiryoUIRegular"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center" />
+
+                     </Grid>
+                     </DataTemplate>
+                     </CollectionView.ItemTemplate>
+              </CollectionView>
+              -->
+              <!--
             <BoxView Grid.Row="4" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"
                      Color="White" />
             <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
@@ -168,7 +240,7 @@
                             Text="189750-000"
                             FontSize="30"
                             FontFamily="MeiryoUIRegular"
-                            HorizontalOptions="End"
+                            Margin="10, 0, 0, 0"
                             VerticalOptions="Center" />
             <BoxView Grid.Row="4" Grid.Column="3" Grid.RowSpan="2"
                               Color="Black" />
@@ -199,6 +271,8 @@
                             FontFamily="MeiryoUIRegular"
                             HorizontalOptions="End"
                             VerticalOptions="Center" />
+       
+              -->
             <BoxView Grid.Row="4" Grid.Column="5" Grid.RowSpan="4"
                               Color="White" />
             <Label Grid.Row="4" Grid.Column="5"
@@ -249,15 +323,20 @@
                    VerticalOptions="Center" />
 
             <!-- 8行目 -->
-            <BoxView Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="3"
-                     Color="#e6e6e6" />
-            <Label Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="3"
-                   Text="紐づけ処理"
-                   TextColor="#7f7f7f"
-                   FontSize="45"
-                   FontFamily="MeiryoUIRegular"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" />
+              <Button Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="3"
+                     Text="紐づけ処理"
+                     TextColor="#7f7f7f"
+                     CornerRadius="0"
+                     BackgroundColor="#e6e6e6"
+                     BorderWidth="0"
+                     FontSize="45"
+                     FontFamily="MeiryoUIRegular"
+                     HeightRequest="158"
+                     WidthRequest="681"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Clicked="OnBindClicked" />
+
 
             <!-- 9行目 -->
             <BoxView Grid.Row="9" Grid.Column="1"
@@ -319,6 +398,10 @@
                    Margin="5, 0, 0, 0"
                    VerticalOptions="Center" />
         </Grid>
+
+              <Button
+                     Text="紐づけ処理"
+                     Clicked="OnAddProductRecordClicked" />
 
     </Grid>
 
