@@ -8,7 +8,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="38" />
             <RowDefinition Height="38" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -70,11 +70,11 @@
                 <RowDefinition Height="27" />
                 <RowDefinition Height="46" />
                 <RowDefinition Height="46" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="52" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="52" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="27" />
                 <RowDefinition Height="27" />
                 <RowDefinition Height="27" />
@@ -87,8 +87,8 @@
                 <ColumnDefinition Width="1" />
 
                 <ColumnDefinition Width="205" />
-                <ColumnDefinition Width="98" />
-                <ColumnDefinition Width="148" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="118" />
                 <ColumnDefinition Width="375" />
                 <ColumnDefinition Width="152"/>
@@ -161,9 +161,8 @@
                    VerticalOptions="Center" />
 
             <!-- 4〜5行目 -->
-            <!--
-              <CollectionView Grid.Row="4" Grid.Column="1" Grid.RowSpan="5" Grid.ColumnSpan="3"
-                               ItemsSource="{Binding ProductRecords}">
+              <CollectionView Grid.Row="4" Grid.Column="1" Grid.RowSpan="5" Grid.ColumnSpan="4"
+                               x:Name="cv">
                               <CollectionView.ItemTemplate>
                               <DataTemplate>
 
@@ -179,8 +178,7 @@
                                    <ColumnDefinition Width="118" />
                             </Grid.ColumnDefinitions>
 
-              <BoxView Grid.RowSpan="2"
-                     Color="White" />
+              <BoxView Grid.RowSpan="2" Color="White" />
             <Label Text="生産品番_設変なし"
                    TextColor="#7f7f7f"
                    Margin="5, 5, 0, 0"
@@ -226,53 +224,7 @@
                      </DataTemplate>
                      </CollectionView.ItemTemplate>
               </CollectionView>
-              -->
-            <!--
-            <BoxView Grid.Row="4" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                     Color="White" />
-            <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
-                   Text="生産品番_設変なし"
-                   TextColor="#7f7f7f"
-                   Margin="5, 5, 0, 0"
-                   FontSize="11"
-                   FontFamily="MeiryoUIRegular" />
-            <Label Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
-                            Text="189750-000"
-                            FontSize="30"
-                            FontFamily="MeiryoUIRegular"
-                            Margin="10, 0, 0, 0"
-                            VerticalOptions="Center" />
-            <BoxView Grid.Row="4" Grid.Column="3" Grid.RowSpan="2"
-                              Color="Black" />
-            <Label Grid.Row="4" Grid.Column="3"
-                            Text="背番号"
-                            Margin="5, 5, 0, 0"
-                            FontSize="11"
-                            FontFamily="MeiryoUIRegular"
-                            TextColor="White" />
-            <Label Grid.Row="5" Grid.Column="3"
-                            Text="◯✖️△□"
-                            FontSize="30"
-                            FontFamily="MeiryoUIRegular"
-                            TextColor="White"
-                            HorizontalOptions="End"
-                            VerticalOptions="Center" />
-            <BoxView Grid.Row="4" Grid.Column="4" Grid.RowSpan="2"
-                              Color="White" />
-            <Label Grid.Row="4" Grid.Column="4"
-                            Text="収容数"
-                            TextColor="#7f7f7f"
-                            FontSize="11"
-                            Margin="5, 5, 0, 0"
-                            FontFamily="MeiryoUIRegular" />
-            <Label Grid.Row="5" Grid.Column="4"
-                            Text="30"
-                            FontSize="28"
-                            FontFamily="MeiryoUIRegular"
-                            HorizontalOptions="End"
-                            VerticalOptions="Center" />
-       
-              -->
+
             <BoxView Grid.Row="4" Grid.Column="5" Grid.RowSpan="4"
                               Color="White" />
             <Label Grid.Row="4" Grid.Column="5"
