@@ -6,12 +6,13 @@
 
     <Grid ColumnSpacing="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="40" />
-            <RowDefinition Height="40" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="38" />
+            <RowDefinition Height="38" />
+            <!-- <RowDefinition Height="*" /> -->
+            <RowDefinition Height="527" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition />
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
@@ -19,52 +20,57 @@
 
         <!-- １〜２行目 -->
         <BoxView Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="4"
-                       Color="#44546a" />
+                 Color="#44546a" />
         <Label Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="4"
-                     Text="電子棚札管理サブシステム-PC版 (おかもちQR読取)"
-                     FontSize="40"
-                     TextColor="White"
-                     LineBreakMode="TailTruncation"
-                     Margin="40, 0, 0, 0"
-                     VerticalOptions="Center" />
+               Text="電子棚札管理サブシステム-PC版（おかもちQR読取）"
+               FontSize="28"
+               FontFamily="MeiryoUIRegular"
+               TextColor="White"
+               LineBreakMode="TailTruncation"
+               Margin="40, 0, 0, 0"
+               VerticalOptions="Center" />
         <Label Grid.Row="0" Grid.Column="1"
-                     Text="所属部署 :"
-                     FontSize="20"
-                     TextColor="White"
-                     VerticalOptions="End" />
+               Text="所属部署 :"
+               FontSize="11"
+               FontFamily="MeiryoUIRegular"
+               TextColor="White"
+               VerticalOptions="End" />
         <Label Grid.Row="0" Grid.Column="2"
-                     Text="ｾｲﾌﾃｨ第1生産部"
-                     FontSize="20"
-                     TextColor="White"
-                     VerticalOptions="End" />
+               Text="ｾｲﾌﾃｨ第1生産部"
+               FontSize="11"
+               FontFamily="MeiryoUIRegular"
+               TextColor="White"
+               VerticalOptions="End" />
         <Label Grid.Row="1" Grid.Column="1"
-                     Text="ログイン中 :"
-                     FontSize="20"
-                     TextColor="White"
-                     VerticalOptions="Start" />
+               Text="ログイン中 :"
+               FontSize="11"
+               FontFamily="MeiryoUIRegular"
+               TextColor="White"
+               VerticalOptions="Start" />
         <Label Grid.Row="1" Grid.Column="2"
-                     Text="C4117 大山 太一"
-                     FontSize="20"
-                     TextColor="White"
-                     VerticalOptions="Start" />
+               Text="C4117 大山 太一"
+               FontSize="11"
+               FontFamily="MeiryoUIRegular"
+               TextColor="White"
+               VerticalOptions="Start" />
         <ImageButton Grid.Row="0" Grid.Column="3" Grid.RowSpan="2"
-                           Source="close.png"
-                           Clicked="OnCloseClicked"
-                           Command="{Binding ExitCommand}"
-                           WidthRequest="20"
-                           HeightRequest="20"
-                           HorizontalOptions="Center"
-                           Margin="30, 0, 40, 0"
-                           VerticalOptions="Center" />
+                     Source="close.png"
+                     Clicked="OnCloseClicked"
+                     WidthRequest="10"
+                     HeightRequest="10"
+                     Margin="30, 0, 40, 0"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center" />
 
         <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Margin="40, 5" RowSpacing="1" ColumnSpacing="1"
-                    BackgroundColor="#aaaaaa">
+              BackgroundColor="#aaaaaa">
             <Grid.RowDefinitions>
-                <RowDefinition Height="1" />
                 <!-- 罫線用 -->
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="60" />
-                <RowDefinition Height="60" />
+                <RowDefinition Height="1" />
+
+                <RowDefinition Height="27" />
+                <RowDefinition Height="46" />
+                <RowDefinition Height="46" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="80" />
                 <RowDefinition Height="Auto" />
@@ -73,69 +79,78 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="1" />
+
                 <!-- 罫線用 -->
+                <RowDefinition Height="1" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1" />
                 <!-- 罫線用 -->
-                <ColumnDefinition Width="260" />
+                <ColumnDefinition Width="1" />
+
+                <ColumnDefinition Width="205" />
                 <ColumnDefinition Width="100" />
                 <ColumnDefinition Width="140" />
                 <ColumnDefinition Width="140" />
                 <ColumnDefinition />
                 <ColumnDefinition Width="160"/>
-                <ColumnDefinition Width="160" />
-                <ColumnDefinition Width="1"/>
+                <ColumnDefinition Width="152" />
+
                 <!-- 罫線用 -->
+                <ColumnDefinition Width="1"/>
             </Grid.ColumnDefinitions>
 
             <!-- 1行目 -->
             <BoxView Grid.Row="1" Grid.Column="1"
-                              Color="#f2f2f2" />
+                     Color="#f2f2f2" />
             <Label Grid.Row="1" Grid.Column="1"
-                            Text="システムメッセージ"
-                            FontSize="20"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center" />
+                   Text="システムメッセージ"
+                   FontSize="12"
+                   FontFamily="MeiryoUIRegular"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
             <BoxView Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="6"
-                              Color="#f2f2f2" />
+                     Color="#f2f2f2" />
 
             <!-- 2行目 -->
             <BoxView Grid.Row="2" Grid.Column="1"
                               Color="White" />
             <Label Grid.Row="2" Grid.Column="1"
                             Text="おかもちQR :"
-                            FontSize="30"
+                            FontSize="18"
+                            FontFamily="MeiryoUIRegular"
                             VerticalOptions="Center" />
             <BoxView Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="5"
                               Color="White" />
             <Label Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="5"
                             Text="OKA_F_    PD03_017"
-                            FontSize="30"
+                            FontSize="18"
+                            FontFamily="MeiryoUIRegular"
                             VerticalOptions="Center" />
             <BoxView Grid.Row="2" Grid.Column="7" Grid.RowSpan="2"
                               Color="#e6e6e6" />
             <Label Grid.Row="2" Grid.Column="7" Grid.RowSpan="2"
                             Text="リセット"
                             TextColor="#7f7f7f"
-                            FontSize="40"
+                            FontSize="26"
+                            FontFamily="MeiryoUIRegular"
                             HorizontalOptions="Center"
                             VerticalOptions="Center" />
 
             <!-- 3行目 -->
             <BoxView Grid.Row="3" Grid.Column="1"
-                              Color="White" />
+                     Color="White" />
             <Label Grid.Row="3" Grid.Column="1"
-                            Text="仕掛かんばんQR :"
-                            FontSize="30"
-                            VerticalOptions="Center" />
+                   Text="仕掛かんばんQR :"
+                   FontSize="18"
+                   FontFamily="MeiryoUIRegular"
+                   VerticalOptions="Center" />
             <BoxView Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="5"
-                              Color="White" />
+                     Color="White" />
             <Label Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="5"
-                            Text="◯✖️△□"
-                            FontSize="30"
-                            VerticalOptions="Center" />
+                   Text="◯✖️△□"
+                   FontSize="18"
+                   FontFamily="MeiryoUIRegular"
+                   VerticalOptions="Center" />
 
             <!-- 4〜5行目 -->
             <BoxView Grid.Row="4" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"
@@ -143,21 +158,25 @@
             <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
                             Text="生産品番_設変なし"
                             TextColor="#7f7f7f"
-                            FontSize="20" />
+                            FontSize="11"
+                            FontFamily="MeiryoUIRegular" />
             <Label Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
                             Text="◯✖️△□"
                             FontSize="30"
+                            FontFamily="MeiryoUIRegular"
                             HorizontalOptions="End"
                             VerticalOptions="Center" />
             <BoxView Grid.Row="4" Grid.Column="3" Grid.RowSpan="2"
                               Color="Black" />
             <Label Grid.Row="4" Grid.Column="3"
                             Text="背番号"
-                            FontSize="20"
+                            FontSize="11"
+                            FontFamily="MeiryoUIRegular"
                             TextColor="White" />
             <Label Grid.Row="5" Grid.Column="3"
                             Text="◯✖️△□"
                             FontSize="30"
+                            FontFamily="MeiryoUIRegular"
                             TextColor="White"
                             HorizontalOptions="End"
                             VerticalOptions="Center" />
@@ -166,10 +185,12 @@
             <Label Grid.Row="4" Grid.Column="4"
                             Text="収容数"
                             TextColor="#7f7f7f"
-                            FontSize="20" />
+                            FontSize="11"
+                            FontFamily="MeiryoUIRegular" />
             <Label Grid.Row="5" Grid.Column="4"
                             Text="0"
-                            FontSize="30"
+                            FontSize="28"
+                            FontFamily="MeiryoUIRegular"
                             HorizontalOptions="End"
                             VerticalOptions="Center" />
             <BoxView Grid.Row="4" Grid.Column="5" Grid.RowSpan="4"
@@ -177,10 +198,12 @@
             <Label Grid.Row="4" Grid.Column="5"
                             Text="供給先ライン"
                             TextColor="#7f7f7f"
-                            FontSize="20" />
+                            FontFamily="MeiryoUIRegular"
+                            FontSize="11" />
             <Label Grid.Row="5" Grid.Column="5" Grid.RowSpan="3"
-                            Text="◯✖️△□"
-                            FontSize="30"
+                            Text="PD03"
+                            FontSize="77"
+                            FontFamily="MeiryoUIRegular"
                             HorizontalOptions="End"
                             VerticalOptions="Center" />
             <BoxView Grid.Row="4" Grid.Column="6" Grid.RowSpan="2" Grid.ColumnSpan="2"
@@ -188,10 +211,12 @@
             <Label Grid.Row="4" Grid.Column="6" Grid.ColumnSpan="2"
                             Text="おかもち連番"
                             TextColor="#7f7f7f"
-                            FontSize="20" />
+                            FontFamily="MeiryoUIRegular"
+                            FontSize="11" />
             <Label Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="2"
-                            Text="◯✖️△□"
-                            FontSize="30"
+                            Text="017"
+                            FontSize="28"
+                            FontFamily="MeiryoUIRegular"
                             HorizontalOptions="End"
                             VerticalOptions="Center" />
 
@@ -203,70 +228,79 @@
             <Label Grid.Row="6" Grid.Column="6" Grid.ColumnSpan="2"
                             Text="合計かんばん枚数"
                             TextColor="#7f7f7f"
-                            FontSize="20" />
+                            FontFamily="MeiryoUIRegular"
+                            FontSize="11" />
             <Label Grid.Row="7" Grid.Column="6" Grid.ColumnSpan="2"
-                            Text="◯✖️△□"
-                            FontSize="30"
-                            HorizontalOptions="End"
-                            VerticalOptions="Center" />
+                   Text="◯✖️△□"
+                   FontSize="28"
+                   FontFamily="MeiryoUIRegular"
+                   HorizontalOptions="End"
+                   VerticalOptions="Center" />
 
             <!-- 8行目 -->
             <BoxView Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="3"
-                              Color="#e6e6e6" />
+                     Color="#e6e6e6" />
             <Label Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="3"
-                            Text="紐づけ処理"
-                            TextColor="#7f7f7f"
-                            FontSize="60"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center" />
+                   Text="紐づけ処理"
+                   TextColor="#7f7f7f"
+                   FontSize="45"
+                   FontFamily="MeiryoUIRegular"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
 
             <!-- 9行目 -->
             <BoxView Grid.Row="9" Grid.Column="1"
-                              Color="#22b14c" />
+                     Color="#22b14c" />
             <Label Grid.Row="9" Grid.Column="1"
-                            Text="通信中"
-                            TextColor="White"
-                            FontSize="20"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center" />
+                   Text="通信中"
+                   TextColor="White"
+                   FontSize="20"
+                   FontFamily="MeiryoUIRegular"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
             <BoxView Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="6"
-                              Color="White" />
+                     Color="White" />
             <Label Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="6"
-                            Text="¥¥tr¥dfs¥生産管理部¥Share¥C230_業務支援G¥C26_他部署提供ツール¥電子棚札¥大口組立生産部¥00_ESL_DATA¥FP_01¥START"
-                            TextColor="#7f7f7f"
-                            FontSize="20" />
+                   Text="¥¥tr¥dfs¥生産管理部¥Share¥C230_業務支援G¥C26_他部署提供ツール¥電子棚札¥大口組立生産部¥00_ESL_DATA¥FP_01¥START"
+                   TextColor="#7f7f7f"
+                   FontSize="20"
+                   FontFamily="MeiryoUIRegular" />
 
             <!-- 10行目 -->
             <BoxView Grid.Row="10" Grid.Column="1"
-                              Color="#22b14c" />
+                     Color="#22b14c" />
             <Label Grid.Row="10" Grid.Column="1"
-                            Text="通信中"
-                            TextColor="White"
-                            FontSize="20"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center" />
+                   Text="通信中"
+                   TextColor="White"
+                   FontSize="11"
+                   FontFamily="MeiryoUIRegular"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
             <BoxView Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="6"
                               Color="White" />
             <Label Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="6"
-                            Text="¥¥tr¥dfs¥生産管理部¥Share¥C230_業務支援G¥C26_他部署提供ツール¥電子棚札¥大口組立生産部¥00_ESL_DATA¥FP_01¥STOP"
-                            TextColor="#7f7f7f"
-                            FontSize="20" />
+                   Text="¥¥tr¥dfs¥生産管理部¥Share¥C230_業務支援G¥C26_他部署提供ツール¥電子棚札¥大口組立生産部¥00_ESL_DATA¥FP_01¥STOP"
+                   TextColor="#7f7f7f"
+                   FontFamily="MeiryoUIRegular"
+                   FontSize="11" />
 
             <!-- 11行目 -->
             <BoxView Grid.Row="11" Grid.Column="1"
-                              Color="#22b14c" />
+                     Color="#22b14c" />
             <Label Grid.Row="11" Grid.Column="1"
-                            Text="通信中"
-                            TextColor="White"
-                            FontSize="20"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center" />
+                   Text="通信中"
+                   TextColor="White"
+                   FontSize="11"
+                   FontFamily="MeiryoUIRegular"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
             <BoxView Grid.Row="11" Grid.Column="2" Grid.ColumnSpan="6"
-                              Color="White" />
+                     Color="White" />
             <Label Grid.Row="11" Grid.Column="2" Grid.ColumnSpan="6"
-                            Text="¥¥tr¥dfs¥生産管理部¥Share¥C230_業務支援G¥C26_他部署提供ツール¥電子棚札¥大口組立生産部¥00_ESL_DATA¥FP_01¥OKAMOCHI"
-                            TextColor="#7f7f7f"
-                            FontSize="20" />
+                   Text="¥¥tr¥dfs¥生産管理部¥Share¥C230_業務支援G¥C26_他部署提供ツール¥電子棚札¥大口組立生産部¥00_ESL_DATA¥FP_01¥OKAMOCHI"
+                   TextColor="#7f7f7f"
+                   FontFamily="MeiryoUIRegular"
+                   FontSize="11" />
         </Grid>
 
     </Grid>
