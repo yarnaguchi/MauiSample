@@ -6,15 +6,16 @@
                  BackgroundColor="#44546a"
                  HeightRequest="76"
                  Spacing="10"
-                 HorizontalOptions="Expand">
+                 HorizontalOptions="FillAndExpand">
         <Label Text="電子棚札管理サブシステム-PC版（おかもちQR読取）"
                FontSize="28"
                FontFamily="MeiryoUIRegular"
                TextColor="White"
                LineBreakMode="TailTruncation"
                Margin="40, 0, 0, 0"
-               HorizontalOptions="Fill" />
-        <StackLayout>
+               VerticalOptions="Center"
+               HorizontalOptions="StartAndExpand" />
+        <StackLayout VerticalOptions="Center">
             <Label Text="所属部署 :"
                    FontSize="11"
                    FontFamily="MeiryoUIRegular"
@@ -26,7 +27,7 @@
                    TextColor="White"
                    HorizontalOptions="End" />
         </StackLayout>
-        <StackLayout>
+        <StackLayout VerticalOptions="Center">
             <Label Text="ｾｲﾌﾃｨ第1生産部"
                    FontSize="11"
                    FontFamily="MeiryoUIRegular"
@@ -38,6 +39,7 @@
         </StackLayout>
         <ImageButton Source="close.png"
                      WidthRequest="10"
-                     HeightRequest="10" />
+                     HeightRequest="10"
+                     Margin="0, 0, 40, 0"/>
     </StackLayout>
 </ContentView>
