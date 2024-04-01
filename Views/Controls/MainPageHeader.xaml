@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiSample.ViewModels"
              x:Class="MauiSample.Views.Controls.MainPageHeader">
+    <!-- ViewModel -->
+    <ContentPage.BindingContext>
+        <vm:MainPageHeaderViewModel />
+    </ContentPage.BindingContext>
+    <!-- View -->
     <StackLayout Orientation="Horizontal"
                  BackgroundColor="#44546a"
                  HeightRequest="76"
@@ -28,18 +34,19 @@
                    HorizontalOptions="End" />
         </StackLayout>
         <StackLayout VerticalOptions="Center">
-            <Label Text="ｾｲﾌﾃｨ第1生産部"
+            <Label Text="{Binding Department}"
                    FontSize="11"
                    FontFamily="MeiryoUIRegular"
                    TextColor="White" />
-            <Label Text="C4117 大山 太一"
+            <Label Text="{Binding UserName}"
                    FontSize="11"
                    FontFamily="MeiryoUIRegular"
                    TextColor="White" />
         </StackLayout>
-        <ImageButton Source="close.png"
+        <ImageButton Command="{Binding CloseCommand}"
+                     Source="close.png"
                      WidthRequest="10"
                      HeightRequest="10"
-                     Margin="0, 0, 40, 0"/>
+                     Margin="0, 0, 40, 0" />
     </StackLayout>
 </ContentView>
