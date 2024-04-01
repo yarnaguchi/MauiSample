@@ -8,13 +8,11 @@
         <vm:MainPageContentViewModel />
     </ContentPage.BindingContext>
     <!-- View -->
-
-    
-    <StackLayout                  BackgroundColor="#aaaaaa"
+    <StackLayout BackgroundColor="#aaaaaa"
                  Margin="40, 5"
                  Padding="1">
-
-        <Grid RowSpacing="1" ColumnSpacing="1">
+        <Grid RowSpacing="1"
+              ColumnSpacing="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -25,57 +23,59 @@
                 <ColumnDefinition />
                 <ColumnDefinition Width="100" />
             </Grid.ColumnDefinitions>
-
-
-            <Label 
-                Text="システムメッセージ"
+            <Label Text="システムメッセージ"
                    FontSize="12"
                    FontFamily="MeiryoUIRegular"
                    BackgroundColor="#f2f2f2"
                    VerticalOptions="Center"
-                    HorizontalTextAlignment="Center" />
-            <Label Grid.Row="1" 
-                Text="おかもちQR :"
+                   HorizontalTextAlignment="Center" />
+            <Label Grid.Row="1"
+                   Text="おかもちQR :"
                    FontSize="18"
                    FontFamily="MeiryoUIRegular"
                    BackgroundColor="White"
                    Padding="5,0,0,0"
                    VerticalOptions="Center" />
-        <Label Grid.Row="2"
-                Text="仕掛かんばんQR :"
+            <Label Grid.Row="2"
+                   Text="仕掛かんばんQR :"
                    FontSize="18"
                    FontFamily="MeiryoUIRegular"
                    BackgroundColor="White"
                    Padding="5, 0, 0, 0"
                    VerticalOptions="Center" />
-                
-
-            <BoxView Grid.Column="1" Grid.ColumnSpan="2" Color="#f2f2f2" HeightRequest="18"/>
-
-        <Label Grid.Row="1" Grid.Column="1" Text="{Binding OkamochiQr}"
-                           FontSize="18"
-                           FontFamily="MeiryoUIRegular"
-                           BackgroundColor="White"
-                           Padding="5, 0, 0, 0"
-                           VerticalOptions="Center"
-                           FlexLayout.Grow="1"/>
-        <Label Grid.Row="2" Grid.Column="1"  Text="{Binding KanbanQr}"
-                           FontSize="18"
-                           FontFamily="MeiryoUIRegular"
-                           BackgroundColor="White"
-                           Padding="5, 0, 0, 0"
-                           VerticalOptions="Center"
-                           FlexLayout.Grow="1"/>
-
-        <Button Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Text="リセット"
-                        TextColor="#7f7f7f"
-                        CornerRadius="0"
-                        BackgroundColor="#e6e6e6"
-                        BorderWidth="0"
-                        FontSize="22"
-                        FontFamily="MeiryoUIRegular"
-                        Command="{Binding ResetCommand}" />
+            <BoxView Grid.Column="1"
+                     Grid.ColumnSpan="2"
+                     Color="#f2f2f2"
+                     HeightRequest="18" />
+            <Label Grid.Row="1"
+                   Grid.Column="1"
+                   Text="{Binding OkamochiQr}"
+                   FontSize="18"
+                   FontFamily="MeiryoUIRegular"
+                   BackgroundColor="White"
+                   Padding="5, 0, 0, 0"
+                   VerticalOptions="Center"
+                   FlexLayout.Grow="1" />
+            <Label Grid.Row="2"
+                   Grid.Column="1"
+                   Text="{Binding KanbanQr}"
+                   FontSize="18"
+                   FontFamily="MeiryoUIRegular"
+                   BackgroundColor="White"
+                   Padding="5, 0, 0, 0"
+                   VerticalOptions="Center"
+                   FlexLayout.Grow="1" />
+            <Button Grid.Row="1"
+                    Grid.Column="2"
+                    Grid.RowSpan="2"
+                    Text="リセット"
+                    TextColor="#7f7f7f"
+                    CornerRadius="0"
+                    BackgroundColor="#e6e6e6"
+                    BorderWidth="0"
+                    FontSize="22"
+                    FontFamily="MeiryoUIRegular"
+                    Command="{Binding ResetCommand}" />
         </Grid>
-
     </StackLayout>
 </ContentView>
