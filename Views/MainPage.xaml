@@ -7,7 +7,9 @@
     <VerticalStackLayout>
         <!-- ヘッダー部 -->
         <controls:MainPageHeader />
-        <!-- コンテンツ部 -->
+        <!-- QRコード部 -->
         <controls:MainPageQr />
+        <!-- かんばん部 -->
+        <controls:MainPageKanban />
     </VerticalStackLayout>
 </ContentPage>
