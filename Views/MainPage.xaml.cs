@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace MauiSample;
+namespace MauiSample.Views;
 
 public class ProductRecord
 {
