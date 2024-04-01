@@ -1,9 +1,9 @@
 ﻿namespace MauiSample.Views.Controls;
 
 
-public partial class MainPageContent : ContentView
+public partial class MainPageQr : ContentView
 {
-    public MainPageContent()
+    public MainPageQr()
     {
         InitializeComponent();
     }

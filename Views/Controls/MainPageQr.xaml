@@ -2,10 +2,10 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:MauiSample.ViewModels"
-             x:Class="MauiSample.Views.Controls.MainPageContent">
+             x:Class="MauiSample.Views.Controls.MainPageQr">
     <!-- ViewModel -->
     <ContentPage.BindingContext>
-        <vm:MainPageContentViewModel />
+        <vm:MainPageQrViewModel />
     </ContentPage.BindingContext>
     <!-- View -->
     <StackLayout BackgroundColor="#aaaaaa"

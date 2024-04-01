@@ -8,6 +8,6 @@
         <!-- ヘッダー部 -->
         <controls:MainPageHeader />
         <!-- コンテンツ部 -->
-        <controls:MainPageContent />
+        <controls:MainPageQr />
     </VerticalStackLayout>
 </ContentPage>
