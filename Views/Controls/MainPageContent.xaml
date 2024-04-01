@@ -14,8 +14,7 @@
                  Margin="40, 5"
                  HorizontalOptions="Fill">
         <StackLayout Spacing="1"
-                     Padding="1"
-                    >
+                     Padding="1">
             <Label Text="システムメッセージ"
                    FontSize="12"
                    FontFamily="MeiryoUIRegular"
@@ -38,11 +37,10 @@
                    VerticalOptions="Center" />
         </StackLayout>
         <StackLayout Spacing="1"
-                     Padding="1"                >
-            <BoxView 
-                     Color="#f2f2f2"
-                HorizontalOptions="Fill"
-VerticalOptions="Fill"/>
+                     Padding="1">
+            <BoxView Color="#f2f2f2"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="Fill" />
         </StackLayout>
     </StackLayout>
 </ContentView>
