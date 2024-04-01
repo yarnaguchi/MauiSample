@@ -4,11 +4,10 @@
              x:Class="MauiSample.Views.MainPage"
              xmlns:controls="clr-namespace:MauiSample.Views.Controls"
              Shell.NavBarIsVisible="False">
-    <StackLayout HorizontalOptions="Fill"
-VerticalOptions="Fill">
+    <VerticalStackLayout>
         <!-- ヘッダー部 -->
         <controls:MainPageHeader />
         <!-- コンテンツ部 -->
         <controls:MainPageContent />
-    </StackLayout>
+    </VerticalStackLayout>
 </ContentPage>
