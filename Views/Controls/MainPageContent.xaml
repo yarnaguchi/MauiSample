@@ -13,8 +13,10 @@
                  Spacing="1"
                  Margin="40, 5"
                  Padding="1"
-                 HorizontalOptions="Fill">
-        <StackLayout Spacing="1">
+                 HorizontalOptions="Fill"
+                 VerticalOptions="Fill">
+        <StackLayout Spacing="1"  HorizontalOptions="Fill"
+ VerticalOptions="Fill">
             <Label Text="システムメッセージ"
                    FontSize="12"
                    FontFamily="MeiryoUIRegular"
@@ -37,16 +39,19 @@
                    VerticalOptions="Center" />
         </StackLayout>
         <StackLayout Spacing="1"
-                     HorizontalOptions="Fill">
+                      HorizontalOptions="Fill"
+ VerticalOptions="Fill">
             <BoxView Color="#f2f2f2"
                      HeightRequest="18"
-                     HorizontalOptions="Fill"
+                     HorizontalOptions="FillAndExpand"
                      VerticalOptions="Fill" />
             <StackLayout Orientation="Horizontal"
                          Spacing="1"
-                         HorizontalOptions="Fill">
+ HorizontalOptions="Fill"
+ VerticalOptions="Fill">
                 <StackLayout Spacing="1"
-                             HorizontalOptions="Fill">
+                             HorizontalOptions="Fill"
+                             VerticalOptions="Fill">
                     <Label Text="{Binding OkamochiQr}"
                            FontSize="18"
                            FontFamily="MeiryoUIRegular"
@@ -60,7 +65,7 @@
                            BackgroundColor="White"
                            Padding="5, 0, 0, 0"
                            HorizontalOptions="Fill"
-                           VerticalOptions="Center" />
+                           VerticalOptions="Fill" />
                 </StackLayout>
                 <Button Text="リセット"
                         TextColor="#7f7f7f"

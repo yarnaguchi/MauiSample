@@ -4,7 +4,8 @@
              x:Class="MauiSample.Views.MainPage"
              xmlns:controls="clr-namespace:MauiSample.Views.Controls"
              Shell.NavBarIsVisible="False">
-    <StackLayout>
+    <StackLayout HorizontalOptions="Fill"
+VerticalOptions="Fill">
         <!-- ヘッダー部 -->
         <controls:MainPageHeader />
         <!-- コンテンツ部 -->
