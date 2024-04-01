@@ -12,9 +12,9 @@
                  BackgroundColor="#aaaaaa"
                  Spacing="1"
                  Margin="40, 5"
+                 Padding="1"
                  HorizontalOptions="Fill">
-        <StackLayout Spacing="1"
-                     Padding="1">
+        <StackLayout Spacing="1">
             <Label Text="システムメッセージ"
                    FontSize="12"
                    FontFamily="MeiryoUIRegular"
@@ -25,22 +25,54 @@
                    FontSize="18"
                    FontFamily="MeiryoUIRegular"
                    BackgroundColor="White"
-                   HorizontalOptions="Fill"
                    Padding="5,0,0,0"
+                   HorizontalOptions="Fill"
                    VerticalOptions="Center" />
             <Label Text="仕掛かんばんQR :"
                    FontSize="18"
                    FontFamily="MeiryoUIRegular"
                    BackgroundColor="White"
-                   HorizontalOptions="Fill"
                    Padding="5, 0, 0, 0"
+                   HorizontalOptions="Fill"
                    VerticalOptions="Center" />
         </StackLayout>
         <StackLayout Spacing="1"
-                     Padding="1">
+                     HorizontalOptions="Fill">
             <BoxView Color="#f2f2f2"
+                     HeightRequest="18"
                      HorizontalOptions="Fill"
                      VerticalOptions="Fill" />
+            <StackLayout Orientation="Horizontal"
+                         Spacing="1"
+                         HorizontalOptions="Fill">
+                <StackLayout Spacing="1"
+                             HorizontalOptions="Fill">
+                    <Label Text="{Binding OkamochiQr}"
+                           FontSize="18"
+                           FontFamily="MeiryoUIRegular"
+                           BackgroundColor="White"
+                           Padding="5, 0, 0, 0"
+                           HorizontalOptions="Fill"
+                           VerticalOptions="Center" />
+                    <Label Text="{Binding KanbanQr}"
+                           FontSize="18"
+                           FontFamily="MeiryoUIRegular"
+                           BackgroundColor="White"
+                           Padding="5, 0, 0, 0"
+                           HorizontalOptions="Fill"
+                           VerticalOptions="Center" />
+                </StackLayout>
+                <Button Text="リセット"
+                        TextColor="#7f7f7f"
+                        CornerRadius="0"
+                        BackgroundColor="#e6e6e6"
+                        BorderWidth="0"
+                        FontSize="26"
+                        FontFamily="MeiryoUIRegular"
+                        VerticalOptions="Fill"
+                        HorizontalOptions="Fill"
+                        Command="{Binding ResetCommand}" />
+            </StackLayout>
         </StackLayout>
     </StackLayout>
 </ContentView>
