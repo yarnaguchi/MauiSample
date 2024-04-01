@@ -10,6 +10,8 @@
         <!-- QRコード部 -->
         <controls:MainPageQr />
         <!-- かんばん部 -->
-        <controls:MainPageKanban />
+        <HorizontalStackLayout>
+            <controls:MainPageKanban />
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

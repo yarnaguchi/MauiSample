@@ -1,28 +1,37 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System.Diagnostics;
 
 namespace MauiSample.ViewModels;
+
+public class Kanban
+{
+    public string ProductNumber { get; set; }
+    public string UniformNumber { get; set; }
+    public string AccommodateNumber { get; set; }
+}
 
 public partial class MainPageKanbanViewModel : ObservableObject
 {
     [ObservableProperty]
-    private string okamochiQr; // -> OkamochiQr
-
-    [ObservableProperty]
-    private string kanbanQr; // -> KanbanQr
+    private List<Kanban> kanbans; // -> Kanbans
 
     public MainPageKanbanViewModel()
     {
-        OkamochiQr = "OKA_F_    PD03_017";
-        KanbanQr = "◯✖️△□";
+        Kanbans = [];
     }
 
 
     [RelayCommand]
     void Reset() // -> ResetCommand
     {
-        OkamochiQr = string.Empty;
-        KanbanQr = string.Empty;
+        Debug.WriteLine("kitayo");
+        Kanbans.Add(new Kanban()
+        {
+            ProductNumber = "189750-000",
+            UniformNumber = "◯✖️△□",
+            AccommodateNumber = "30",
+        });
     }
 }
 
