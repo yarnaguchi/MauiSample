@@ -12,7 +12,7 @@
                  BackgroundColor="#44546a"
                  HeightRequest="76"
                  Spacing="10"
-                 HorizontalOptions="FillAndExpand">
+                 HorizontalOptions="Fill">
         <Label Text="電子棚札管理サブシステム-PC版（おかもちQR読取）"
                FontSize="28"
                FontFamily="MeiryoUIRegular"
@@ -20,7 +20,7 @@
                LineBreakMode="TailTruncation"
                Margin="40, 0, 0, 0"
                VerticalOptions="Center"
-               HorizontalOptions="StartAndExpand" />
+               HorizontalOptions="FillAndExpand" />
         <StackLayout VerticalOptions="Center">
             <Label Text="所属部署 :"
                    FontSize="11"

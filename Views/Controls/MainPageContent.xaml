@@ -12,23 +12,37 @@
                  BackgroundColor="#aaaaaa"
                  Spacing="1"
                  Margin="40, 5"
-                 HorizontalOptions="FillAndExpand">
+                 HorizontalOptions="Fill">
         <StackLayout Spacing="1"
                      Padding="1"
-                     HorizontalOptions="FillAndExpand">
+                    >
             <Label Text="システムメッセージ"
                    FontSize="12"
                    FontFamily="MeiryoUIRegular"
                    BackgroundColor="#f2f2f2"
-                   HorizontalOptions="StartAndExpand"
+                   HorizontalOptions="Fill"
                    VerticalOptions="Center" />
             <Label Text="おかもちQR :"
                    FontSize="18"
                    FontFamily="MeiryoUIRegular"
                    BackgroundColor="White"
-                   Margin="5, 0, 0, 0"
-                   HorizontalOptions="StartAndExpand"
+                   HorizontalOptions="Fill"
+                   Padding="5,0,0,0"
                    VerticalOptions="Center" />
+            <Label Text="仕掛かんばんQR :"
+                   FontSize="18"
+                   FontFamily="MeiryoUIRegular"
+                   BackgroundColor="White"
+                   HorizontalOptions="Fill"
+                   Padding="5, 0, 0, 0"
+                   VerticalOptions="Center" />
+        </StackLayout>
+        <StackLayout Spacing="1"
+                     Padding="1"                >
+            <BoxView 
+                     Color="#f2f2f2"
+                HorizontalOptions="Fill"
+VerticalOptions="Fill"/>
         </StackLayout>
     </StackLayout>
 </ContentView>
