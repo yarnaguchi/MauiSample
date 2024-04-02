@@ -10,7 +10,7 @@
     <!-- View -->
     <Grid ColumnSpacing="1"
           RowDefinitions="*"
-          ColumnDefinitions="*, Auto">
+          ColumnDefinitions="*, Auto, Auto">
         <ScrollView>
             <CollectionView ItemsSource="{Binding Kanbans}">
                 <CollectionView.ItemTemplate>
@@ -69,8 +69,70 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </ScrollView>
-        <Button Grid.Column="1"
+        <Grid Grid.Column="1"
+              ColumnSpacing="1"
+              RowDefinitions="Auto, Auto, 1, Auto, Auto, *, Auto"
+              ColumnDefinitions="Auto, Auto">
+            <Label Text="供給先ライン"
+                   TextColor="#7f7f7f"
+                   BackgroundColor="White"
+                   Padding="5, 5, 0, 0"
+                   FontFamily="MeiryoUIRegular"
+                   FontSize="11" />
+            <Label Grid.Row="1"
+                   Grid.RowSpan="4"
+                   Text="PD03"
+                   BackgroundColor="White"
+                   FontSize="77"
+                   FontFamily="MeiryoUIRegular"
+                   Padding="0, 0, 10, 0"
+                   HorizontalTextAlignment="End" />
+            <Label Grid.Column="1"
+                   Text="おかもち連番"
+                   TextColor="#7f7f7f"
+                   BackgroundColor="White"
+                   Padding="5, 5, 0, 0"
+                   FontFamily="MeiryoUIRegular"
+                   FontSize="11" />
+            <Label Grid.Row="1"
+                   Grid.Column="1"
+                   Text="017"
+                   BackgroundColor="White"
+                   FontSize="28"
+                   FontFamily="MeiryoUIRegular"
+                   Padding="0, 0, 10, 0"
+                   HorizontalTextAlignment="End" />
+            <Label Grid.Row="3"
+                   Grid.Column="1"
+                   Text="合計かんばん枚数"
+                   TextColor="#7f7f7f"
+                   BackgroundColor="White"
+                   Padding="5, 5, 0, 0"
+                   FontFamily="MeiryoUIRegular"
+                   FontSize="11" />
+            <Label Grid.Row="4"
+                   Grid.Column="1"
+                   Text="{Binding KanbanCount, StringFormat='{0}枚'} }"
+                   BackgroundColor="White"
+                   FontSize="28"
+                   FontFamily="MeiryoUIRegular"
+                   Padding="0, 0, 10, 0"
+                   HorizontalTextAlignment="End" />
+            <Button Grid.Row="6"
+                    Grid.ColumnSpan="2"
+                    Text="紐づけ処理"
+                    TextColor="#7f7f7f"
+                    CornerRadius="0"
+                    BackgroundColor="#e6e6e6"
+                    BorderWidth="0"
+                    FontSize="45"
+                    FontFamily="MeiryoUIRegular"
+                    HeightRequest="158"
+                    WidthRequest="500"
+                    Command="{Binding BindCommand}" />
+        </Grid>
+        <Button Grid.Column="2"
                 Text="追加"
-                Command="{Binding ResetCommand}" />
+                Command="{Binding AddDataCommand}" />
     </Grid>
 </ContentView>
