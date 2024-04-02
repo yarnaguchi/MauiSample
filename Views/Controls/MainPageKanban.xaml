@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiSample.ViewModels"
+             x:Class="MauiSample.Views.Controls.MainPageKanban">
+    <!-- ViewModel -->
+    <ContentPage.BindingContext>
+        <vm:MainPageKanbanViewModel />
+    </ContentPage.BindingContext>
+    <!-- View -->
+    <Grid ColumnSpacing="1"
+          RowDefinitions="*"
+          ColumnDefinitions="*, Auto, Auto">
+        <ScrollView>
+            <CollectionView ItemsSource="{Binding Kanbans}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnSpacing="1"
+                              RowDefinitions="Auto, Auto, 1"
+                              ColumnDefinitions="*, 148, 118">
+                            <Label Text="生産品番_設変なし"
+                                   TextColor="#7f7f7f"
+                                   Padding="5, 5, 0, 0"
+                                   FontSize="11"
+                                   FontFamily="MeiryoUIRegular"
+                                   BackgroundColor="White" />
+                            <Label Grid.Row="1"
+                                   Text="{Binding ProductNumber}"
+                                   FontSize="30"
+                                   FontFamily="MeiryoUIRegular"
+                                   LineBreakMode="TailTruncation"
+                                   Padding="10, 0, 0, 0"
+                                   BackgroundColor="White"
+                                   VerticalOptions="Center" />
+                            <Label Grid.Column="1"
+                                   Text="背番号"
+                                   Padding="5, 5, 0, 0"
+                                   FontSize="11"
+                                   FontFamily="MeiryoUIRegular"
+                                   TextColor="White"
+                                   BackgroundColor="Black" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Text="{Binding UniformNumber}"
+                                   FontSize="30"
+                                   FontFamily="MeiryoUIRegular"
+                                   TextColor="White"
+                                   HorizontalOptions="Fill"
+                                   VerticalOptions="Center"
+                                   HorizontalTextAlignment="End"
+                                   BackgroundColor="Black" />
+                            <Label Grid.Column="2"
+                                   Text="収容数"
+                                   TextColor="#7f7f7f"
+                                   FontSize="11"
+                                   Padding="5, 5, 0, 0"
+                                   BackgroundColor="White"
+                                   FontFamily="MeiryoUIRegular" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="2"
+                                   Text="{Binding AccommodateNumber}"
+                                   FontSize="30"
+                                   FontFamily="MeiryoUIRegular"
+                                   BackgroundColor="White"
+                                   HorizontalOptions="Fill"
+                                   VerticalOptions="Center"
+                                   HorizontalTextAlignment="End" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+        <Grid Grid.Column="1"
+              ColumnSpacing="1"
+              RowDefinitions="Auto, Auto, 1, Auto, Auto, Auto"
+              ColumnDefinitions="Auto, Auto">
+            <Label Text="供給先ライン"
+                   TextColor="#7f7f7f"
+                   BackgroundColor="White"
+                   Padding="5, 5, 0, 0"
+                   FontFamily="MeiryoUIRegular"
+                   FontSize="11" />
+            <Label Grid.Row="1"
+                   Grid.RowSpan="4"
+                   Text="{Binding ProvideLine}"
+                   BackgroundColor="White"
+                   FontSize="77"
+                   FontFamily="MeiryoUIRegular"
+                   Padding="0, 0, 10, 0"
+                   HorizontalTextAlignment="End" />
+            <Label Grid.Column="1"
+                   Text="おかもち連番"
+                   TextColor="#7f7f7f"
+                   BackgroundColor="White"
+                   Padding="5, 5, 0, 0"
+                   FontFamily="MeiryoUIRegular"
+                   FontSize="11" />
+            <Label Grid.Row="1"
+                   Grid.Column="1"
+                   Text="{Binding OkamochiSeq}"
+                   BackgroundColor="White"
+                   FontSize="28"
+                   FontFamily="MeiryoUIRegular"
+                   Padding="0, 0, 10, 0"
+                   HorizontalTextAlignment="End" />
+            <Label Grid.Row="3"
+                   Grid.Column="1"
+                   Text="合計かんばん枚数"
+                   TextColor="#7f7f7f"
+                   BackgroundColor="White"
+                   Padding="5, 5, 0, 0"
+                   FontFamily="MeiryoUIRegular"
+                   FontSize="11" />
+            <Label Grid.Row="4"
+                   Grid.Column="1"
+                   Text="{Binding KanbanCount, StringFormat='{0}枚'} }"
+                   BackgroundColor="White"
+                   FontSize="28"
+                   FontFamily="MeiryoUIRegular"
+                   Padding="0, 0, 10, 0"
+                   HorizontalTextAlignment="End" />
+            <Button Grid.Row="5"
+                    Grid.ColumnSpan="2"
+                    Text="紐づけ処理"
+                    TextColor="#7f7f7f"
+                    CornerRadius="0"
+                    BackgroundColor="#e6e6e6"
+                    BorderWidth="0"
+                    FontSize="45"
+                    FontFamily="MeiryoUIRegular"
+                    HeightRequest="158"
+                    WidthRequest="500"
+                    Command="{Binding BindCommand}" />
+        </Grid>
+        <Button Grid.Column="2"
+                Text="追加"
+                Command="{Binding AddDataCommand}" />
+    </Grid>
+</ContentView>
