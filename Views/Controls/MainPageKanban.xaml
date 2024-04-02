@@ -11,13 +11,13 @@
     <Grid ColumnSpacing="1"
           RowDefinitions="*"
           ColumnDefinitions="*, Auto">
-        <ScrollView Orientation="Both">
+        <ScrollView>
             <CollectionView ItemsSource="{Binding Kanbans}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid ColumnSpacing="1"
                               RowDefinitions="Auto, Auto, 1"
-                              ColumnDefinitions="303, 148, 118">
+                              ColumnDefinitions="*, 148, 118">
                             <Label Text="生産品番_設変なし"
                                    TextColor="#7f7f7f"
                                    Padding="5, 5, 0, 0"
