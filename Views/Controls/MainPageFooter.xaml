@@ -20,7 +20,7 @@
                FontFamily="MeiryoUIRegular"
                HorizontalTextAlignment="Center" />
         <Label Grid.Column="1"
-               Text="¥¥tr¥dfs¥生産管理部¥Share¥C230_業務支援G¥C26_他部署提供ツール¥電子棚札¥大口組立生産部¥00_ESL_DATA¥FP_01¥START"
+               Text="{Binding StartPath}"
                TextColor="#7f7f7f"
                BackgroundColor="White"
                FontFamily="MeiryoUIRegular"
@@ -36,7 +36,7 @@
                HorizontalTextAlignment="Center" />
         <Label Grid.Row="1"
                Grid.Column="1"
-               Text="¥¥tr¥dfs¥生産管理部¥Share¥C230_業務支援G¥C26_他部署提供ツール¥電子棚札¥大口組立生産部¥00_ESL_DATA¥FP_01¥STOP"
+               Text="{Binding StopPath}"
                TextColor="#7f7f7f"
                BackgroundColor="White"
                FontFamily="MeiryoUIRegular"
@@ -52,7 +52,7 @@
                HorizontalTextAlignment="Center" />
         <Label Grid.Row="2"
                Grid.Column="1"
-               Text="¥¥tr¥dfs¥生産管理部¥Share¥C230_業務支援G¥C26_他部署提供ツール¥電子棚札¥大口組立生産部¥00_ESL_DATA¥FP_01¥OKAMOCHI"
+               Text="{Binding OkamochiPath}"
                TextColor="#7f7f7f"
                BackgroundColor="White"
                FontFamily="MeiryoUIRegular"

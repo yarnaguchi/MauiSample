@@ -28,6 +28,7 @@
                                    Text="{Binding ProductNumber}"
                                    FontSize="30"
                                    FontFamily="MeiryoUIRegular"
+                                   LineBreakMode="TailTruncation"
                                    Padding="10, 0, 0, 0"
                                    BackgroundColor="White"
                                    VerticalOptions="Center" />
@@ -71,7 +72,7 @@
         </ScrollView>
         <Grid Grid.Column="1"
               ColumnSpacing="1"
-              RowDefinitions="Auto, Auto, 1, Auto, Auto, *, Auto"
+              RowDefinitions="Auto, Auto, 1, Auto, Auto, Auto"
               ColumnDefinitions="Auto, Auto">
             <Label Text="供給先ライン"
                    TextColor="#7f7f7f"
@@ -81,7 +82,7 @@
                    FontSize="11" />
             <Label Grid.Row="1"
                    Grid.RowSpan="4"
-                   Text="PD03"
+                   Text="{Binding ProvideLine}"
                    BackgroundColor="White"
                    FontSize="77"
                    FontFamily="MeiryoUIRegular"
@@ -96,7 +97,7 @@
                    FontSize="11" />
             <Label Grid.Row="1"
                    Grid.Column="1"
-                   Text="017"
+                   Text="{Binding OkamochiSeq}"
                    BackgroundColor="White"
                    FontSize="28"
                    FontFamily="MeiryoUIRegular"
@@ -118,7 +119,7 @@
                    FontFamily="MeiryoUIRegular"
                    Padding="0, 0, 10, 0"
                    HorizontalTextAlignment="End" />
-            <Button Grid.Row="6"
+            <Button Grid.Row="5"
                     Grid.ColumnSpan="2"
                     Text="紐づけ処理"
                     TextColor="#7f7f7f"

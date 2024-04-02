@@ -3,32 +3,47 @@ using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using MauiSample.Models;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 
 namespace MauiSample.ViewModels;
 
 
 public partial class MainPageKanbanViewModel : ObservableObject
 {
+    // バーコードで読み取ったかんばんの情報
     [ObservableProperty]
     private ObservableCollection<Kanban> kanbans; // -> Kanbans
 
+    // 供給先ライン
+    [ObservableProperty]
+    private string provideLine; // -> ProvideLine
+
+    // おかもち連番
+    [ObservableProperty]
+    private string okamochiSeq; // -> OkamochiSeq
+
+    // 合計かんばん枚数
     [ObservableProperty]
     private int kanbanCount; // -> KanbanCount
-
 
     public MainPageKanbanViewModel()
     {
         Kanbans = [];
+        ProvideLine = "PD03";
+        OkamochiSeq = "017";
         KanbanCount = 0;
 
-        WeakReferenceMessenger.Default.Register<ValueResetMessage>(this, (r, m) =>
+        WeakReferenceMessenger.Default.Register<ValueResetMessage>(this, (recipient, message) =>
         {
             // Handle the message here, with r being the recipient and m being the
             // input message. Using the recipient passed as input makes it so that
             // the lambda expression doesn't capture "this", improving performance.
-            Debug.WriteLine(r);
-            Debug.WriteLine(m);
+            if (message.Value == "reset")
+            {
+                Kanbans = [];
+                ProvideLine = string.Empty;
+                OkamochiSeq = string.Empty;
+                KanbanCount = 0;
+            }
         });
     }
 
