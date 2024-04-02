@@ -4,14 +4,16 @@
              x:Class="MauiSample.Views.MainPage"
              xmlns:controls="clr-namespace:MauiSample.Views.Controls"
              Shell.NavBarIsVisible="False">
-    <VerticalStackLayout>
+    <Grid RowDefinitions="Auto, *">
         <!-- ヘッダー部 -->
         <controls:MainPageHeader />
-        <!-- QRコード部 -->
-        <controls:MainPageQr />
-        <!-- かんばん部 -->
-        <HorizontalStackLayout>
+        <VerticalStackLayout Grid.Row="1"
+             Margin="40, 5"
+             Padding="1" Spacing="1" BackgroundColor="#aaaaaa">
+            <!-- QRコード部 -->
+            <controls:MainPageQr />
+            <!-- かんばん部 -->
             <controls:MainPageKanban />
-        </HorizontalStackLayout>
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>
