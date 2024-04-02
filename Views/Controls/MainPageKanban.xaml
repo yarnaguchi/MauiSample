@@ -11,7 +11,7 @@
     <Grid ColumnSpacing="1"
           RowDefinitions="*"
           ColumnDefinitions="*, Auto">
-        <ScrollView>
+        <ScrollView Orientation="Both">
             <CollectionView ItemsSource="{Binding Kanbans}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
