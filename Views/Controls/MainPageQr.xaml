@@ -8,7 +8,7 @@
         <vm:MainPageQrViewModel />
     </ContentPage.BindingContext>
     <!-- View -->
-    <StackLayout >
+    <StackLayout>
         <Grid RowSpacing="1"
               ColumnSpacing="1">
             <Grid.RowDefinitions>

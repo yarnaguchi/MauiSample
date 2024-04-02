@@ -8,60 +8,65 @@
         <vm:MainPageKanbanViewModel />
     </ContentPage.BindingContext>
     <!-- View -->
-        <CollectionView ItemsSource="{Binding Kanbans}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid ColumnSpacing="1" RowDefinitions="Auto,Auto,1" ColumnDefinitions="303,148,118">
-
-                        <Label Text="生産品番_設変なし"
-                   TextColor="#7f7f7f"
-                   Padding="5, 5, 0, 0"
-                   FontSize="11"
-                   FontFamily="MeiryoUIRegular"
-                               BackgroundColor="White"/>
-
-                        <Label Grid.Row="1"
-                            Text="{Binding ProductNumber}"
-                            FontSize="30"
-                            FontFamily="MeiryoUIRegular"
-                            Padding="10, 0, 0, 0"
-                               BackgroundColor="White"
-                            VerticalOptions="Center" />
-                        <Label Grid.Column="1"
-                            Text="背番号"
-                            Padding="5, 5, 0, 0"
-                            FontSize="11"
-                            FontFamily="MeiryoUIRegular"
-                            TextColor="White"
-                               BackgroundColor="Black"/>
-                        <Label Grid.Row="1" Grid.Column="1"
-                            Text="{Binding UniformNumber}"
-                            FontSize="30"
-                            FontFamily="MeiryoUIRegular"
-                            TextColor="White"
-                            HorizontalOptions="Fill"
-                            VerticalOptions="Center"
-                               HorizontalTextAlignment="End"
-                                                              BackgroundColor="Black"/>
-                        <Label Grid.Column="2"
-                            Text="収容数"
-                            TextColor="#7f7f7f"
-                            FontSize="11"
-                            Padding="5, 5, 0, 0"
-                               BackgroundColor="White"
-                            FontFamily="MeiryoUIRegular" />
-                        <Label Grid.Row="1" Grid.Column="2"
-                            Text="{Binding AccommodateNumber}"
-                            FontSize="30"
-                            FontFamily="MeiryoUIRegular"
-                               BackgroundColor="White"
-                            HorizontalOptions="Fill"
-                            VerticalOptions="Center"
-                               HorizontalTextAlignment="End"                               />
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-        <!--<Button   Grid.Row="1"      Text="追加"
-                    Command="{Binding ResetCommand}" />-->
+    <CollectionView ItemsSource="{Binding Kanbans}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid ColumnSpacing="1"
+                      RowDefinitions="Auto,Auto,1"
+                      ColumnDefinitions="303,148,118">
+                    <Label Text="生産品番_設変なし"
+                           TextColor="#7f7f7f"
+                           Padding="5, 5, 0, 0"
+                           FontSize="11"
+                           FontFamily="MeiryoUIRegular"
+                           BackgroundColor="White" />
+                    <Label Grid.Row="1"
+                           Text="{Binding ProductNumber}"
+                           FontSize="30"
+                           FontFamily="MeiryoUIRegular"
+                           Padding="10, 0, 0, 0"
+                           BackgroundColor="White"
+                           VerticalOptions="Center" />
+                    <Label Grid.Column="1"
+                           Text="背番号"
+                           Padding="5, 5, 0, 0"
+                           FontSize="11"
+                           FontFamily="MeiryoUIRegular"
+                           TextColor="White"
+                           BackgroundColor="Black" />
+                    <Label Grid.Row="1"
+                           Grid.Column="1"
+                           Text="{Binding UniformNumber}"
+                           FontSize="30"
+                           FontFamily="MeiryoUIRegular"
+                           TextColor="White"
+                           HorizontalOptions="Fill"
+                           VerticalOptions="Center"
+                           HorizontalTextAlignment="End"
+                           BackgroundColor="Black" />
+                    <Label Grid.Column="2"
+                           Text="収容数"
+                           TextColor="#7f7f7f"
+                           FontSize="11"
+                           Padding="5, 5, 0, 0"
+                           BackgroundColor="White"
+                           FontFamily="MeiryoUIRegular" />
+                    <Label Grid.Row="1"
+                           Grid.Column="2"
+                           Text="{Binding AccommodateNumber}"
+                           FontSize="30"
+                           FontFamily="MeiryoUIRegular"
+                           BackgroundColor="White"
+                           HorizontalOptions="Fill"
+                           VerticalOptions="Center"
+                           HorizontalTextAlignment="End" />
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+    <!--
+    <Button Grid.Row="1"
+        Text="追加"
+        Command="{Binding ResetCommand}" />
+    -->
 </ContentView>

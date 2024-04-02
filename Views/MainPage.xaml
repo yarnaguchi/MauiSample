@@ -8,8 +8,10 @@
         <!-- ヘッダー部 -->
         <controls:MainPageHeader />
         <VerticalStackLayout Grid.Row="1"
-             Margin="40, 5"
-             Padding="1" Spacing="1" BackgroundColor="#aaaaaa">
+                             Margin="40, 5"
+                             Padding="1"
+                             Spacing="1"
+                             BackgroundColor="#aaaaaa">
             <!-- QRコード部 -->
             <controls:MainPageQr />
             <!-- かんばん部 -->
