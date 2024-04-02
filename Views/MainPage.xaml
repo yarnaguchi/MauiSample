@@ -7,8 +7,8 @@
     <Grid RowDefinitions="Auto, *">
         <!-- ヘッダー部 -->
         <controls:MainPageHeader />
-        <Grid RowDefinitions="Auto, *"
-              Grid.Row="1"
+        <Grid Grid.Row="1"
+              RowDefinitions="Auto, *, Auto"
               Margin="40, 5"
               Padding="1"
               RowSpacing="1"
@@ -18,6 +18,8 @@
             <controls:MainPageQr />
             <!-- かんばん部 -->
             <controls:MainPageKanban Grid.Row="1" />
+            <!-- フッター部 -->
+            <controls:MainPageFooter Grid.Row="2" />
         </Grid>
     </Grid>
 </ContentPage>

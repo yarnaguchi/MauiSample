@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiSample.ViewModels"
+             x:Class="MauiSample.Views.Controls.MainPageFooter">
+    <!-- ViewModel -->
+    <ContentPage.BindingContext>
+        <vm:MainPageFooterViewModel />
+    </ContentPage.BindingContext>
+    <!-- View -->
+    <Grid RowDefinitions="Auto, Auto, Auto"
+          ColumnDefinitions="Auto, *"
+          RowSpacing="1"
+          ColumnSpacing="2">
+        <Label Text="通信中"
+               TextColor="White"
+               BackgroundColor="#22b14c"
+               Padding="20, 0"
+               FontSize="11"
+               FontFamily="MeiryoUIRegular"
+               HorizontalTextAlignment="Center" />
+        <Label Grid.Column="1"
+               Text="¥¥tr¥dfs¥生産管理部¥Share¥C230_業務支援G¥C26_他部署提供ツール¥電子棚札¥大口組立生産部¥00_ESL_DATA¥FP_01¥START"
+               TextColor="#7f7f7f"
+               BackgroundColor="White"
+               FontFamily="MeiryoUIRegular"
+               FontSize="11"
+               Padding="5, 0, 0, 0" />
+        <Label Grid.Row="1"
+               Text="通信中"
+               TextColor="White"
+               BackgroundColor="#22b14c"
+               Padding="20, 0"
+               FontSize="11"
+               FontFamily="MeiryoUIRegular"
+               HorizontalTextAlignment="Center" />
+        <Label Grid.Row="1"
+               Grid.Column="1"
+               Text="¥¥tr¥dfs¥生産管理部¥Share¥C230_業務支援G¥C26_他部署提供ツール¥電子棚札¥大口組立生産部¥00_ESL_DATA¥FP_01¥STOP"
+               TextColor="#7f7f7f"
+               BackgroundColor="White"
+               FontFamily="MeiryoUIRegular"
+               FontSize="11"
+               Padding="5, 0, 0, 0" />
+        <Label Grid.Row="2"
+               Text="通信中"
+               TextColor="White"
+               BackgroundColor="#22b14c"
+               Padding="20, 0"
+               FontSize="11"
+               FontFamily="MeiryoUIRegular"
+               HorizontalTextAlignment="Center" />
+        <Label Grid.Row="2"
+               Grid.Column="1"
+               Text="¥¥tr¥dfs¥生産管理部¥Share¥C230_業務支援G¥C26_他部署提供ツール¥電子棚札¥大口組立生産部¥00_ESL_DATA¥FP_01¥OKAMOCHI"
+               TextColor="#7f7f7f"
+               BackgroundColor="White"
+               FontFamily="MeiryoUIRegular"
+               FontSize="11"
+               Padding="5, 0, 0, 0" />
+    </Grid>
+</ContentView>
